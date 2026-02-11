@@ -1,24 +1,18 @@
-import React from "react"
 import type { Metadata, Viewport } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Inter } from "next/font/google";
 
 import "./globals.css";
 
 const inter = Inter({
-  subsets: ["latin", "cyrillic"],
+  subsets: ["latin"],
   variable: "--font-inter",
-});
-
-const manrope = Manrope({
-  subsets: ["latin", "cyrillic"],
-  variable: "--font-manrope",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title:
-    "NevaCard — Корпоративные топливные карты | Контроль расходов на ГСМ",
+  title: "NeVacart — Fuel Costs Under Control",
   description:
-    "NevaCard — сервис корпоративных топливных карт с покрытием по всей России. Полный контроль расходов на ГСМ, автоматизация отчётности, экономия до 15% на топливе.",
+    "Track, analyze, and optimize your fleet's fuel consumption in real time. Real-time tracking, expense reports, and driver analytics for businesses.",
 };
 
 export const viewport: Viewport = {
@@ -35,10 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
-      <body
-        className={`${inter.variable} ${manrope.variable} font-sans antialiased`}
-      >
+    <html lang="en">
+      <body className={`${inter.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

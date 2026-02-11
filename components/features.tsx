@@ -1,113 +1,71 @@
-"use client";
-
-import { useAnimateOnScroll } from "@/hooks/use-animate-on-scroll";
-import {
-  BarChart3,
-  ShieldCheck,
-  Zap,
-  MapPin,
-  FileText,
-  Users,
-} from "lucide-react";
-
 const features = [
   {
-    icon: BarChart3,
-    title: "Полный контроль расходов",
+    title: "Real-time Tracking",
     description:
-      "Отслеживайте каждую заправку в реальном времени. Устанавливайте лимиты по картам, водителям и транспортным средствам.",
-    color: "bg-primary/8 text-primary",
-    hoverColor: "group-hover:bg-primary group-hover:text-primary-foreground",
+      "Monitor every transaction as it happens. Set limits per card, driver, or vehicle and get instant alerts on suspicious activity.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </svg>
+    ),
   },
   {
-    icon: ShieldCheck,
-    title: "Защита от махинаций",
+    title: "Expense Reports",
     description:
-      "Интеллектуальная система выявляет подозрительные транзакции и мгновенно уведомляет вас. Сливы топлива уходят в прошлое.",
-    color: "bg-emerald-500/8 text-emerald-600",
-    hoverColor: "group-hover:bg-emerald-500 group-hover:text-card",
+      "Auto-generated reports with full breakdowns by driver, vehicle, and fuel type. Export to CSV or sync with your accounting software.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+        <polyline points="14 2 14 8 20 8" />
+        <line x1="16" y1="13" x2="8" y2="13" />
+        <line x1="16" y1="17" x2="8" y2="17" />
+        <polyline points="10 9 9 9 8 9" />
+      </svg>
+    ),
   },
   {
-    icon: Zap,
-    title: "Автоматизация отчётности",
+    title: "Driver Analytics",
     description:
-      "Забудьте о ручном сборе чеков. Автоматическая выгрузка в 1С, детализированные отчёты и электронные акты.",
-    color: "bg-accent/8 text-accent",
-    hoverColor: "group-hover:bg-accent group-hover:text-accent-foreground",
-  },
-  {
-    icon: MapPin,
-    title: "25 000+ АЗС по России",
-    description:
-      "Работаем со всеми крупными сетями: Лукойл, Газпромнефть, Роснефть, Shell, BP и независимыми АЗС.",
-    color: "bg-primary/8 text-primary",
-    hoverColor: "group-hover:bg-primary group-hover:text-primary-foreground",
-  },
-  {
-    icon: FileText,
-    title: "Прозрачное ценообразование",
-    description:
-      "Никаких скрытых комиссий и наценок. Вы платите фиксированную стоимость за обслуживание — и видите реальные цены на топливо.",
-    color: "bg-emerald-500/8 text-emerald-600",
-    hoverColor: "group-hover:bg-emerald-500 group-hover:text-card",
-  },
-  {
-    icon: Users,
-    title: "Персональный менеджер",
-    description:
-      "Выделенный менеджер для вашей компании. Помощь с подключением, настройкой и решением любых вопросов.",
-    color: "bg-accent/8 text-accent",
-    hoverColor: "group-hover:bg-accent group-hover:text-accent-foreground",
+      "Understand driving patterns, fuel efficiency, and spending habits per driver. Identify top performers and areas for improvement.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    ),
   },
 ];
 
 export function Features() {
-  const [ref, isVisible] = useAnimateOnScroll<HTMLDivElement>();
-
   return (
-    <section id="features" className="relative py-16 sm:py-24 lg:py-32 overflow-hidden">
-      {/* Subtle background accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full bg-primary/[0.02] blur-[100px] -z-10" />
-
-      <div ref={ref} className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div
-          className={`text-center max-w-2xl mx-auto mb-12 sm:mb-20 ${
-            isVisible ? "animate-fade-up" : "opacity-0"
-          }`}
-        >
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary mb-6">
-            <Zap className="h-3.5 w-3.5" />
-            Возможности
-          </div>
-          <h2 className="font-heading text-2xl font-extrabold text-foreground sm:text-4xl lg:text-[2.75rem] text-balance leading-tight">
-            Всё, что нужно для контроля
-            <br className="hidden sm:block" />
-            расходов на топливо
+    <section id="features" className="border-t border-border bg-muted/40 px-4 py-16 sm:px-6 sm:py-24 lg:py-28">
+      <div className="mx-auto max-w-5xl">
+        <div className="text-center">
+          <h2 className="text-balance text-2xl font-bold text-foreground sm:text-3xl lg:text-4xl">
+            Everything you need to manage fuel spend
           </h2>
-          <p className="mt-4 sm:mt-5 text-base sm:text-lg text-muted-foreground leading-relaxed">
-            Мы создали инструмент, который закрывает все боли управления
-            топливными расходами — от первого литра до годового отчёта.
+          <p className="mx-auto mt-3 max-w-xl text-base text-muted-foreground sm:mt-4 sm:text-lg">
+            Three powerful tools that give you full visibility and control over
+            your fleet{"'"}s fuel costs.
           </p>
         </div>
 
-        <div className="grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, i) => (
+        <div className="mt-12 grid gap-6 sm:mt-16 sm:grid-cols-3">
+          {features.map((feature) => (
             <div
               key={feature.title}
-              className={`group relative rounded-2xl border border-border/60 bg-card p-6 sm:p-8 transition-all duration-500 hover:shadow-xl hover:shadow-primary/[0.04] hover:border-primary/20 hover:-translate-y-1 ${
-                isVisible ? "animate-fade-up" : "opacity-0"
-              }`}
-              style={{ animationDelay: `${150 + i * 100}ms` }}
+              className="rounded-lg border border-border bg-card p-6 sm:p-8"
             >
-              <div
-                className={`flex h-13 w-13 items-center justify-center rounded-2xl ${feature.color} ${feature.hoverColor} mb-6 transition-all duration-300`}
-              >
-                <feature.icon className="h-6 w-6" />
+              <div className="flex h-11 w-11 items-center justify-center rounded-md bg-primary/10 text-primary">
+                {feature.icon}
               </div>
-              <h3 className="font-heading text-lg font-bold text-foreground mb-3">
+              <h3 className="mt-4 text-lg font-semibold text-foreground">
                 {feature.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {feature.description}
               </p>
             </div>
