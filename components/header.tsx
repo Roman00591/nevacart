@@ -37,7 +37,7 @@ export function Header() {
             <Fuel className="h-4.5 w-4.5 text-primary-foreground" />
           </div>
           <span className="text-xl font-heading font-bold tracking-tight text-foreground">
-            Neva<span className="text-primary">Cart</span>
+            Neva<span className="text-primary">Card</span>
           </span>
         </Link>
 

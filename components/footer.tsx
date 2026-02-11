@@ -34,7 +34,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border/60 bg-card">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-8 py-10 sm:gap-10 sm:py-16 sm:grid-cols-2 lg:grid-cols-5">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-5 group">
@@ -42,7 +42,7 @@ export function Footer() {
                 <Fuel className="h-4.5 w-4.5 text-primary-foreground" />
               </div>
               <span className="text-xl font-heading font-bold text-foreground">
-                Neva<span className="text-primary">Cart</span>
+                Neva<span className="text-primary">Card</span>
               </span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs mb-8">
@@ -54,7 +54,7 @@ export function Footer() {
                 8 (800) 500-00-00
               </p>
               <p>Бесплатно по России</p>
-              <p>info@nevacart.ru</p>
+              <p>info@nevacard.ru</p>
             </div>
           </div>
 
@@ -82,7 +82,7 @@ export function Footer() {
 
         <div className="border-t border-border/60 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground/60">
-            {`\u00A9 ${new Date().getFullYear()} NevaCart. Все права защищены.`}
+            {`\u00A9 ${new Date().getFullYear()} NevaCard. Все права защищены.`}
           </p>
           <p className="text-xs text-muted-foreground/60">
             {'ООО "НеваКарт" | ИНН 7801234567 | ОГРН 1234567890123'}

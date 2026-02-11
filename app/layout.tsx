@@ -16,13 +16,17 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title:
-    "NevaCart — Корпоративные топливные карты | Контроль расходов на ГСМ",
+    "NevaCard — Корпоративные топливные карты | Контроль расходов на ГСМ",
   description:
-    "NevaCart — сервис корпоративных топливных карт с покрытием по всей России. Полный контроль расходов на ГСМ, автоматизация отчётности, экономия до 15% на топливе.",
+    "NevaCard — сервис корпоративных топливных карт с покрытием по всей России. Полный контроль расходов на ГСМ, автоматизация отчётности, экономия до 15% на топливе.",
 };
 
 export const viewport: Viewport = {
   themeColor: "#2563EB",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 };
 
 export default function RootLayout({

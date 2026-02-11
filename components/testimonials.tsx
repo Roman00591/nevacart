@@ -8,7 +8,7 @@ const testimonials = [
     name: "Алексей Петров",
     role: "Финансовый директор",
     company: "ТрансЛогистика",
-    text: "До NevaCart мы тратили 3 дня в месяц на сверку чеков. Сейчас всё автоматически выгружается в 1С. Экономия времени — колоссальная.",
+    text: "До NevaCard мы тратили 3 дня в месяц на сверку чеков. Сейчас всё автоматически выгружается в 1С. Экономия времени — колоссальная.",
     rating: 5,
     fleet: "120 автомобилей",
   },
@@ -36,11 +36,11 @@ export function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative py-24 lg:py-32 bg-card/60 border-y border-border/60"
+      className="relative py-16 sm:py-24 lg:py-32 bg-card/60 border-y border-border/60"
     >
       <div ref={ref} className="mx-auto max-w-7xl px-5 lg:px-8">
         <div
-          className={`text-center max-w-2xl mx-auto mb-20 ${
+          className={`text-center max-w-2xl mx-auto mb-12 sm:mb-20 ${
             isVisible ? "animate-fade-up" : "opacity-0"
           }`}
         >
@@ -48,11 +48,11 @@ export function Testimonials() {
             <Star className="h-3.5 w-3.5 fill-current" />
             Отзывы клиентов
           </div>
-          <h2 className="font-heading text-3xl font-extrabold text-foreground sm:text-4xl lg:text-[2.75rem] text-balance leading-tight">
+          <h2 className="font-heading text-2xl font-extrabold text-foreground sm:text-4xl lg:text-[2.75rem] text-balance leading-tight">
             Нам доверяют 4 200+ компаний
           </h2>
-          <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-            Послушайте, что говорят наши клиенты о работе с NevaCart.
+          <p className="mt-4 sm:mt-5 text-base sm:text-lg text-muted-foreground leading-relaxed">
+            Послушайте, что говорят наши клиенты о работе с NevaCard.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export function Testimonials() {
           {testimonials.map((t, i) => (
             <div
               key={t.name}
-              className={`group relative rounded-2xl border border-border/60 bg-background p-8 transition-all duration-500 hover:shadow-xl hover:shadow-primary/[0.04] hover:border-primary/20 hover:-translate-y-1 ${
+              className={`group relative rounded-2xl border border-border/60 bg-background p-6 sm:p-8 transition-all duration-500 hover:shadow-xl hover:shadow-primary/[0.04] hover:border-primary/20 hover:-translate-y-1 ${
                 isVisible ? "animate-fade-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${200 + i * 120}ms` }}
@@ -96,7 +96,7 @@ export function Testimonials() {
                     {t.role}, {t.company}
                   </p>
                 </div>
-                <span className="text-[10px] font-medium text-muted-foreground/60 uppercase tracking-wider">
+                <span className="hidden sm:inline text-[10px] font-medium text-muted-foreground/60 uppercase tracking-wider">
                   {t.fleet}
                 </span>
               </div>
