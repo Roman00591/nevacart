@@ -18,7 +18,7 @@ const faqs = [
     a: "Подключение занимает 1 рабочий день. Вы оставляете заявку, мы оформляем договор и доставляем карты курьером. Можно начать пользоваться уже на следующий день.",
   },
   {
-    q: "Какие АЗС принимают карты NevaCart?",
+    q: "Какие АЗС принимают карты NevaCard?",
     a: "Наши карты принимаются на более чем 25 000 АЗС по всей России, включая Лукойл, Газпромнефть, Роснефть, Shell, BP и тысячи независимых станций. Покрытие охватывает все регионы.",
   },
   {
@@ -43,7 +43,7 @@ export function FAQ() {
   const [ref, isVisible] = useAnimateOnScroll<HTMLDivElement>();
 
   return (
-    <section id="faq" className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="faq" className="relative py-16 sm:py-24 lg:py-32 overflow-hidden">
       <div ref={ref} className="mx-auto max-w-3xl px-5 lg:px-8">
         <div
           className={`text-center mb-16 ${
@@ -54,10 +54,10 @@ export function FAQ() {
             <HelpCircle className="h-3.5 w-3.5" />
             Вопросы и ответы
           </div>
-          <h2 className="font-heading text-3xl font-extrabold text-foreground sm:text-4xl lg:text-[2.75rem] text-balance leading-tight">
+          <h2 className="font-heading text-2xl font-extrabold text-foreground sm:text-4xl lg:text-[2.75rem] text-balance leading-tight">
             Часто задаваемые вопросы
           </h2>
-          <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
+          <p className="mt-4 sm:mt-5 text-base sm:text-lg text-muted-foreground leading-relaxed">
             Не нашли ответ? Напишите нам — мы ответим в течение часа.
           </p>
         </div>

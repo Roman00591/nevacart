@@ -45,14 +45,14 @@ export function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="relative py-24 lg:py-32 overflow-hidden"
+      className="relative py-16 sm:py-24 lg:py-32 overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-accent/[0.03] blur-[80px] -z-10" />
 
       <div ref={ref} className="mx-auto max-w-7xl px-5 lg:px-8">
         <div
-          className={`text-center max-w-2xl mx-auto mb-20 ${
+          className={`text-center max-w-2xl mx-auto mb-12 sm:mb-20 ${
             isVisible ? "animate-fade-up" : "opacity-0"
           }`}
         >
@@ -60,10 +60,10 @@ export function HowItWorks() {
             <CreditCard className="h-3.5 w-3.5" />
             Как подключить
           </div>
-          <h2 className="font-heading text-3xl font-extrabold text-foreground sm:text-4xl lg:text-[2.75rem] text-balance leading-tight">
+          <h2 className="font-heading text-2xl font-extrabold text-foreground sm:text-4xl lg:text-[2.75rem] text-balance leading-tight">
             Подключение за 4 простых шага
           </h2>
-          <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
+          <p className="mt-4 sm:mt-5 text-base sm:text-lg text-muted-foreground leading-relaxed">
             Никакой бюрократии. Мы сделали процесс максимально простым,
             чтобы вы могли начать экономить уже сегодня.
           </p>
@@ -80,7 +80,7 @@ export function HowItWorks() {
             />
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:gap-8 grid-cols-2 lg:grid-cols-4">
             {steps.map((step, i) => (
               <div
                 key={step.step}

@@ -20,7 +20,7 @@ export function ContactCTA() {
   return (
     <section
       id="contact"
-      className="relative py-24 lg:py-32 overflow-hidden"
+      className="relative py-16 sm:py-24 lg:py-32 overflow-hidden"
     >
       {/* Dark background */}
       <div className="absolute inset-0 bg-foreground -z-20" />
@@ -46,12 +46,12 @@ export function ContactCTA() {
               Начните сегодня
             </div>
 
-            <h2 className="font-heading text-3xl font-extrabold text-primary-foreground sm:text-4xl lg:text-[2.75rem] text-balance leading-tight">
+            <h2 className="font-heading text-2xl font-extrabold text-primary-foreground sm:text-4xl lg:text-[2.75rem] text-balance leading-tight">
               Готовы взять расходы
               <br className="hidden sm:block" />
               на топливо под контроль?
             </h2>
-            <p className="mt-6 text-primary-foreground/50 leading-relaxed text-lg max-w-lg">
+            <p className="mt-4 sm:mt-6 text-primary-foreground/50 leading-relaxed text-base sm:text-lg max-w-lg">
               Оставьте заявку, и наш менеджер свяжется с вами в течение
               15 минут. Подберём оптимальный тариф и доставим карты за 1 день.
             </p>
@@ -91,7 +91,7 @@ export function ContactCTA() {
           <div
             className={`${isVisible ? "animate-slide-in-right" : "opacity-0"}`}
           >
-            <div className="rounded-3xl glass-dark border border-primary-foreground/10 p-8 lg:p-10 shadow-2xl">
+            <div className="rounded-3xl glass-dark border border-primary-foreground/10 p-6 sm:p-8 lg:p-10 shadow-2xl">
               {submitted ? (
                 <div className="text-center py-12">
                   <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-accent/20 mb-6 animate-scale-in">
@@ -136,7 +136,7 @@ export function ContactCTA() {
                     placeholder="+7 (___) ___-__-__"
                     className="h-12 rounded-xl bg-primary-foreground/5 border-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/30 focus:border-primary/50 focus:ring-primary/20 transition-all"
                   />
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <Input
                       type="email"
                       placeholder="Email"

@@ -23,15 +23,15 @@ function StatItem({
 
   return (
     <div
-      className={`relative py-12 px-6 text-center lg:py-16 group ${
+      className={`relative py-8 px-4 text-center sm:py-12 sm:px-6 lg:py-16 group ${
         isVisible ? "animate-fade-up" : "opacity-0"
       }`}
       style={{ animationDelay: `${index * 120}ms` }}
     >
-      <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/8 text-primary mb-4 transition-transform duration-300 group-hover:scale-110">
+      <div className="mx-auto flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-2xl bg-primary/8 text-primary mb-3 sm:mb-4 transition-transform duration-300 group-hover:scale-110">
         <Icon className="h-5 w-5" />
       </div>
-      <p className="font-heading text-4xl font-extrabold text-foreground lg:text-5xl tabular-nums">
+      <p className="font-heading text-2xl font-extrabold text-foreground sm:text-4xl lg:text-5xl tabular-nums">
         {count.toLocaleString("ru-RU")}
         <span className="text-primary">{suffix}</span>
       </p>
